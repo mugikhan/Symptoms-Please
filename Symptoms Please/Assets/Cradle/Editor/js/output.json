@@ -3,12 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "HIVArc",
+                "Name": "Untitled Passage",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Good morning doctor, I have HIV. Please can you give me antiretrovirals.",
+                        "text": "I have a fever, weight loss, loss of appetite, night sweats, coughing, chills and chest pain. (TB).",
                         "type": "text"
                     },
                     {
@@ -16,27 +16,133 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"How do you know that you have HIV?\",\"Q1\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"How do you know that you have HIV?\",\"Q1\")",
+                        "innerText": "set: $sy to (a: \"nausea\", \"vomiting\", \"loss_of_appetite\", \"night_sweats\", \"irritability\", \"abdominal_pain\", \"headaches\")",
+                        "name": "set",
+                        "text": "(set: $sy to (a: \"nausea\", \"vomiting\", \"loss_of_appetite\", \"night_sweats\", \"irritability\", \"abdominal_pain\", \"headaches\"))",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "set:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "How do you know that you have HIV?",
-                                "text": "\"How do you know that you have HIV?\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "Q1",
-                                "text": "\"Q1\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "to",
+                                "type": "to"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "a: \"nausea\", \"vomiting\", \"loss_of_appetite\", \"night_sweats\", \"irritability\", \"abdominal_pain\", \"headaches\"",
+                                "name": "a",
+                                "text": "(a: \"nausea\", \"vomiting\", \"loss_of_appetite\", \"night_sweats\", \"irritability\", \"abdominal_pain\", \"headaches\")",
+                                "tokens": [
+                                    {
+                                        "text": "a:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "vomiting",
+                                        "text": "\"vomiting\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "loss_of_appetite",
+                                        "text": "\"loss_of_appetite\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "night_sweats",
+                                        "text": "\"night_sweats\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "irritability",
+                                        "text": "\"irritability\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "abdominal_pain",
+                                        "text": "\"abdominal_pain\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "headaches",
+                                        "text": "\"headaches\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
                             }
                         ],
                         "type": "macro"
@@ -46,17 +152,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Check symptoms\",\"Q2\"",
+                        "innerText": "link-goto:\"Do you have a fever?\",\"Do you have a fever?\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Check symptoms\",\"Q2\")",
+                        "text": "(link-goto:\"Do you have a fever?\",\"Do you have a fever?\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Check symptoms",
-                                "text": "\"Check symptoms\"",
+                                "innerText": "Do you have a fever?",
+                                "text": "\"Do you have a fever?\"",
                                 "type": "string"
                             },
                             {
@@ -64,8 +170,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
+                                "innerText": "Do you have a fever?",
+                                "text": "\"Do you have a fever?\"",
                                 "type": "string"
                             }
                         ],
@@ -74,12 +180,12 @@
                 ]
             },
             {
-                "Name": "Q1",
+                "Name": "Do you have a fever?",
                 "Pid": "2",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "I slept with another man last night and when we looked, the condom was broken.",
+                        "text": "asd",
                         "type": "text"
                     },
                     {
@@ -87,17 +193,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Does this man have HIV?\",\"Q3\"",
+                        "innerText": "link-goto:\"You experiencing any nausea?\",\"Nausea\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Does this man have HIV?\",\"Q3\")",
+                        "text": "(link-goto:\"You experiencing any nausea?\",\"Nausea\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Does this man have HIV?",
-                                "text": "\"Does this man have HIV?\"",
+                                "innerText": "You experiencing any nausea?",
+                                "text": "\"You experiencing any nausea?\"",
                                 "type": "string"
                             },
                             {
@@ -105,8 +211,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Q3",
-                                "text": "\"Q3\"",
+                                "innerText": "Nausea",
+                                "text": "\"Nausea\"",
                                 "type": "string"
                             }
                         ],
@@ -115,143 +221,411 @@
                     {
                         "text": "\n",
                         "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Why did you sleep with another man? Are you homosexual?\",\"Why did you sleep with another man? Are you homosexual?\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Why did you sleep with another man? Are you homosexual?\",\"Why did you sleep with another man? Are you homosexual?\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Why did you sleep with another man? Are you homosexual?",
-                                "text": "\"Why did you sleep with another man? Are you homosexual?\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Why did you sleep with another man? Are you homosexual?",
-                                "text": "\"Why did you sleep with another man? Are you homosexual?\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
                     }
                 ]
             },
             {
-                "Name": "Q3",
+                "Name": "Nausea",
                 "Pid": "3",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Yes he does have HIV because he has slept with another man before me.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Has he been tested for HIV?\",\"Has he been tested for HIV?\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Has he been tested for HIV?\",\"Has he been tested for HIV?\")",
+                        "innerText": "if: $sy contains \"fever\"",
+                        "name": "if",
+                        "text": "(if: $sy contains \"fever\")",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "if:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Has he been tested for HIV?",
-                                "text": "\"Has he been tested for HIV?\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "Has he been tested for HIV?",
-                                "text": "\"Has he been tested for HIV?\"",
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "contains",
+                                "type": "contains"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "fever",
+                                "text": "\"fever\"",
                                 "type": "string"
                             }
                         ],
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
+                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\t[[you experiencing loss of appetite?|Appetite]]\t\n\t](else:)[\n\t\t[[have you been experiencing phlegm|Phlegm]]\n\t]\n",
+                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\t[[you experiencing loss of appetite?|Appetite]]\t\n\t](else:)[\n\t\t[[have you been experiencing phlegm|Phlegm]]\n\t]\n]",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\t",
+                                "type": "text"
+                            },
+                            {
+                                "innerText": "if: $sy contains \"nausea\"",
+                                "name": "if",
+                                "text": "(if: $sy contains \"nausea\")",
+                                "tokens": [
+                                    {
+                                        "text": "if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "sy",
+                                        "text": "$sy",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "contains",
+                                        "type": "contains"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "\n\t\t[[you experiencing loss of appetite?|Appetite]]\t\n\t",
+                                "text": "[\n\t\t[[you experiencing loss of appetite?|Appetite]]\t\n\t]",
+                                "tokens": [
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t\t",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "innerText": "link-goto:\"you experiencing loss of appetite?\",\"Appetite\"",
+                                        "name": "linkgoto",
+                                        "text": "(link-goto:\"you experiencing loss of appetite?\",\"Appetite\")",
+                                        "tokens": [
+                                            {
+                                                "text": "link-goto:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "innerText": "you experiencing loss of appetite?",
+                                                "text": "\"you experiencing loss of appetite?\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "innerText": "Appetite",
+                                                "text": "\"Appetite\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": "\t",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "innerText": "else:",
+                                "name": "else",
+                                "text": "(else:)",
+                                "tokens": [
+                                    {
+                                        "text": "else:",
+                                        "type": "macroName"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "\n\t\t[[have you been experiencing phlegm|Phlegm]]\n\t",
+                                "text": "[\n\t\t[[have you been experiencing phlegm|Phlegm]]\n\t]",
+                                "tokens": [
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t\t",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "innerText": "link-goto:\"have you been experiencing phlegm\",\"Phlegm\"",
+                                        "name": "linkgoto",
+                                        "text": "(link-goto:\"have you been experiencing phlegm\",\"Phlegm\")",
+                                        "tokens": [
+                                            {
+                                                "text": "link-goto:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "innerText": "have you been experiencing phlegm",
+                                                "text": "\"have you been experiencing phlegm\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "innerText": "Phlegm",
+                                                "text": "\"Phlegm\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
                                 "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
                             }
                         ],
                         "type": "macro"
+                    },
+                    {
+                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\t[[Have you been short of breath?|Short of breath]]\n\t]\n",
+                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\t[[Have you been short of breath?|Short of breath]]\n\t]\n]",
+                        "tokens": [
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\t",
+                                "type": "text"
+                            },
+                            {
+                                "innerText": "if: $sy contains \"nausea\"",
+                                "name": "if",
+                                "text": "(if: $sy contains \"nausea\")",
+                                "tokens": [
+                                    {
+                                        "text": "if:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "name": "sy",
+                                        "text": "$sy",
+                                        "type": "variable"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "text": "contains",
+                                        "type": "contains"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "\n\t\t[[Have you been getting headaches?|Headaches]]\n\t",
+                                "text": "[\n\t\t[[Have you been getting headaches?|Headaches]]\n\t]",
+                                "tokens": [
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t\t",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "innerText": "link-goto:\"Have you been getting headaches?\",\"Headaches\"",
+                                        "name": "linkgoto",
+                                        "text": "(link-goto:\"Have you been getting headaches?\",\"Headaches\")",
+                                        "tokens": [
+                                            {
+                                                "text": "link-goto:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "innerText": "Have you been getting headaches?",
+                                                "text": "\"Have you been getting headaches?\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "innerText": "Headaches",
+                                                "text": "\"Headaches\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "innerText": "else:",
+                                "name": "else",
+                                "text": "(else:)",
+                                "tokens": [
+                                    {
+                                        "text": "else:",
+                                        "type": "macroName"
+                                    }
+                                ],
+                                "type": "macro"
+                            },
+                            {
+                                "innerText": "\n\t\t[[Have you been short of breath?|Short of breath]]\n\t",
+                                "text": "[\n\t\t[[Have you been short of breath?|Short of breath]]\n\t]",
+                                "tokens": [
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t\t",
+                                        "type": "text"
+                                    },
+                                    {
+                                        "innerText": "link-goto:\"Have you been short of breath?\",\"Short of breath\"",
+                                        "name": "linkgoto",
+                                        "text": "(link-goto:\"Have you been short of breath?\",\"Short of breath\")",
+                                        "tokens": [
+                                            {
+                                                "text": "link-goto:",
+                                                "type": "macroName"
+                                            },
+                                            {
+                                                "innerText": "Have you been short of breath?",
+                                                "text": "\"Have you been short of breath?\"",
+                                                "type": "string"
+                                            },
+                                            {
+                                                "text": ",",
+                                                "type": "comma"
+                                            },
+                                            {
+                                                "innerText": "Short of breath",
+                                                "text": "\"Short of breath\"",
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "macro"
+                                    },
+                                    {
+                                        "text": "\n",
+                                        "type": "br"
+                                    },
+                                    {
+                                        "text": "\t",
+                                        "type": "text"
+                                    }
+                                ],
+                                "type": "hook"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
             {
-                "Name": "Has he been tested for HIV?",
+                "Name": "Appetite",
                 "Pid": "4",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "No, but he is gay like me and has had sex with another man. Even if he didn't have HIV before, he has HIV now after we had sex.",
+                        "text": "asd",
                         "type": "text"
                     },
                     {
@@ -259,141 +633,279 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Wait, neither you nor he has been tested for HIV?\",\"Wait, neither you nor he has been tested for HIV?\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Wait, neither you nor he has been tested for HIV?\",\"Wait, neither you nor he has been tested for HIV?\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Wait, neither you nor he has been tested for HIV?",
-                                "text": "\"Wait, neither you nor he has been tested for HIV?\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Wait, neither you nor he has been tested for HIV?",
-                                "text": "\"Wait, neither you nor he has been tested for HIV?\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
                         "text": "\n",
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
+                        "innerText": "if: $sy contains all of (a:\"fever\",\"nausea\",\"loss_of_appetite\")",
+                        "name": "if",
+                        "text": "(if: $sy contains all of (a:\"fever\",\"nausea\",\"loss_of_appetite\"))",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "if:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "contains",
+                                "type": "contains"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "all",
+                                "text": "all of",
+                                "type": "belongingProperty"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "a:\"fever\",\"nausea\",\"loss_of_appetite\"",
+                                "name": "a",
+                                "text": "(a:\"fever\",\"nausea\",\"loss_of_appetite\")",
+                                "tokens": [
+                                    {
+                                        "text": "a:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "innerText": "fever",
+                                        "text": "\"fever\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "innerText": "loss_of_appetite",
+                                        "text": "\"loss_of_appetite\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
                             }
                         ],
                         "type": "macro"
+                    },
+                    {
+                        "innerText": "\n\tYou have hepatitus A\n",
+                        "text": "[\n\tYou have hepatitus A\n]",
+                        "tokens": [
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tYou have hepatitus A",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
+                                "type": "macroName"
+                            }
+                        ],
+                        "type": "macro"
+                    },
+                    {
+                        "innerText": "\n\tYou have pneumonia\n",
+                        "text": "[\n\tYou have pneumonia\n]",
+                        "tokens": [
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tYou have pneumonia",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
             {
-                "Name": "Wait, neither you nor he has been tested for HIV?",
+                "Name": "Phlegm",
                 "Pid": "5",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "No but we don't need to test because we are gay, we have given each other HIV because we had sex and the condom broke!",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\",\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\",\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\")",
+                        "innerText": "if: $sy contains all of (a:\"fever\",\"nausea\",\"phlegm\")",
+                        "name": "if",
+                        "text": "(if: $sy contains all of (a:\"fever\",\"nausea\",\"phlegm\"))",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "if:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.",
-                                "text": "\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.",
-                                "text": "\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "contains",
+                                "type": "contains"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "all",
+                                "text": "all of",
+                                "type": "belongingProperty"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "a:\"fever\",\"nausea\",\"phlegm\"",
+                                "name": "a",
+                                "text": "(a:\"fever\",\"nausea\",\"phlegm\")",
+                                "tokens": [
+                                    {
+                                        "text": "a:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "innerText": "fever",
+                                        "text": "\"fever\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "innerText": "phlegm",
+                                        "text": "\"phlegm\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
                             }
                         ],
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
+                        "innerText": "\n\tYou have the flu\n",
+                        "text": "[\n\tYou have the flu\n]",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tYou have the flu",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
                                 "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
                             }
                         ],
                         "type": "macro"
+                    },
+                    {
+                        "innerText": "\n\tYou have the TB\n",
+                        "text": "[\n\tYou have the TB\n]",
+                        "tokens": [
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tYou have the TB",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
             {
-                "Name": "HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.",
+                "Name": "Headaches",
                 "Pid": "6",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "You don't know what you are talking about. Where does HIV come from? It comes from our sins, like having sex with other men. Please, just give me the ARVs so that I can leave.",
+                        "text": "asd",
                         "type": "text"
                     },
                     {
@@ -401,641 +913,233 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Prescribe ARVs\",\"Prescribe ARVs\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Prescribe ARVs\",\"Prescribe ARVs\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Prescribe ARVs",
-                                "text": "\"Prescribe ARVs\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Prescribe ARVs",
-                                "text": "\"Prescribe ARVs\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
                         "text": "\n",
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Recommend an HIV test\",\"Recommend an HIV test\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Recommend an HIV test\",\"Recommend an HIV test\")",
+                        "innerText": "if: $sy contains all of (a:\"nausea\",\"headaches\")",
+                        "name": "if",
+                        "text": "(if: $sy contains all of (a:\"nausea\",\"headaches\"))",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "if:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Recommend an HIV test",
-                                "text": "\"Recommend an HIV test\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "Recommend an HIV test",
-                                "text": "\"Recommend an HIV test\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "contains",
+                                "type": "contains"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "name": "all",
+                                "text": "all of",
+                                "type": "belongingProperty"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "a:\"nausea\",\"headaches\"",
+                                "name": "a",
+                                "text": "(a:\"nausea\",\"headaches\")",
+                                "tokens": [
+                                    {
+                                        "text": "a:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "innerText": "nausea",
+                                        "text": "\"nausea\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "innerText": "headaches",
+                                        "text": "\"headaches\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
                             }
                         ],
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
+                        "innerText": "\n\tyou have codein\n",
+                        "text": "[\n\tyou have codein\n]",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tyou have codein",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
+                    },
+                    {
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
+                        "tokens": [
+                            {
+                                "text": "else:",
                                 "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
                             }
                         ],
                         "type": "macro"
+                    },
+                    {
+                        "innerText": "\n\tyou have stress\n",
+                        "text": "[\n\tyou have stress\n]",
+                        "tokens": [
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            },
+                            {
+                                "text": "\tyou have stress",
+                                "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
+                            }
+                        ],
+                        "type": "hook"
                     }
                 ]
             },
             {
-                "Name": "Prescribe ARVs",
+                "Name": "Short of breath",
                 "Pid": "7",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Thank you. I won't have long now, but maybe I won't suffer.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\",\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\",\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\")",
+                        "innerText": "if: $sy contains (a:\"short_of_breath\")",
+                        "name": "if",
+                        "text": "(if: $sy contains (a:\"short_of_breath\"))",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "if:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly",
-                                "text": "\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
+                                "name": "sy",
+                                "text": "$sy",
+                                "type": "variable"
                             },
                             {
-                                "innerText": "You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly",
-                                "text": "\"You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly\"",
-                                "type": "string"
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "text": "contains",
+                                "type": "contains"
+                            },
+                            {
+                                "text": " ",
+                                "type": "whitespace"
+                            },
+                            {
+                                "innerText": "a:\"short_of_breath\"",
+                                "name": "a",
+                                "text": "(a:\"short_of_breath\")",
+                                "tokens": [
+                                    {
+                                        "text": "a:",
+                                        "type": "macroName"
+                                    },
+                                    {
+                                        "innerText": "short_of_breath",
+                                        "text": "\"short_of_breath\"",
+                                        "type": "string"
+                                    }
+                                ],
+                                "type": "macro"
                             }
                         ],
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Goodbye\",\"Goodbye\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Goodbye\",\"Goodbye\")",
+                        "innerText": "\n\tyou have hypertension\n",
+                        "text": "[\n\tyou have hypertension\n]",
                         "tokens": [
                             {
-                                "text": "link-goto:",
-                                "type": "macroName"
+                                "text": "\n",
+                                "type": "br"
                             },
                             {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "Recommend an HIV test",
-                "Pid": "8",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Why must you waste my time like this? I am dying already, I can feel myself dying. I waited in this queue for four hours and now I must go wait in another queue? I do not have time. You think that you know everything, but I know that I am dying.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Goodbye\",\"Goodbye\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Goodbye\",\"Goodbye\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"You can't know that for certain\",\"You can't know that for certain\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"You can't know that for certain\",\"You can't know that for certain\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "You can't know that for certain",
-                                "text": "\"You can't know that for certain\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "You can't know that for certain",
-                                "text": "\"You can't know that for certain\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "You can live with HIV, many people have lived full lives with HIV, just be sure to take your ARVs correctly",
-                "Pid": "9",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Double-click this passage to edit it.",
-                        "type": "text"
-                    }
-                ]
-            },
-            {
-                "Name": "Goodbye",
-                "Pid": "10",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "innerText": "The patient leaves",
-                        "text": "*The patient leaves*",
-                        "tokens": [
-                            {
-                                "text": "The patient leaves",
+                                "text": "\tyou have hypertension",
                                 "type": "text"
+                            },
+                            {
+                                "text": "\n",
+                                "type": "br"
                             }
                         ],
-                        "type": "em"
-                    }
-                ]
-            },
-            {
-                "Name": "You can't know that for certain",
-                "Pid": "11",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "innerText": "link-goto:\"Next patient\",\"Next patient\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Next patient\",\"Next patient\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Next patient",
-                                "text": "\"Next patient\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Next patient",
-                                "text": "\"Next patient\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "Next patient",
-                "Pid": "12",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Double-click this passage to edit it.",
-                        "type": "text"
-                    }
-                ]
-            },
-            {
-                "Name": "Why did you sleep with another man? Are you homosexual?",
-                "Pid": "13",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "I have sinful thoughts, and believe that I love this man. They told me that it was only lust and not love, but I love this man. Now I will die for my sins, but I cannot live with these demons.",
-                        "type": "text"
+                        "type": "hook"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Why will you die?\",\"Why will you die?\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Why will you die?\",\"Why will you die?\")",
+                        "innerText": "else:",
+                        "name": "else",
+                        "text": "(else:)",
                         "tokens": [
                             {
-                                "text": "link-goto:",
+                                "text": "else:",
                                 "type": "macroName"
-                            },
-                            {
-                                "innerText": "Why will you die?",
-                                "text": "\"Why will you die?\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Why will you die?",
-                                "text": "\"Why will you die?\"",
-                                "type": "string"
                             }
                         ],
                         "type": "macro"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Loving another man is not sinful\",\"Loving another man is not sinful\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Loving another man is not sinful\",\"Loving another man is not sinful\")",
+                        "innerText": "\n\tyou have diabetes\n",
+                        "text": "[\n\tyou have diabetes\n]",
                         "tokens": [
                             {
-                                "text": "link-goto:",
-                                "type": "macroName"
+                                "text": "\n",
+                                "type": "br"
                             },
                             {
-                                "innerText": "Loving another man is not sinful",
-                                "text": "\"Loving another man is not sinful\"",
-                                "type": "string"
+                                "text": "\tyou have diabetes",
+                                "type": "text"
                             },
                             {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Loving another man is not sinful",
-                                "text": "\"Loving another man is not sinful\"",
-                                "type": "string"
+                                "text": "\n",
+                                "type": "br"
                             }
                         ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"You deserve to get HIV for having sex with another man\",\"You deserve to get HIV for having sex with another man\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"You deserve to get HIV for having sex with another man\",\"You deserve to get HIV for having sex with another man\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "You deserve to get HIV for having sex with another man",
-                                "text": "\"You deserve to get HIV for having sex with another man\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "You deserve to get HIV for having sex with another man",
-                                "text": "\"You deserve to get HIV for having sex with another man\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "Why will you die?",
-                "Pid": "14",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Because having sinful sex causes HIV.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Q3\",\"Q3\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Q3\",\"Q3\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Q3",
-                                "text": "\"Q3\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q3",
-                                "text": "\"Q3\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "Loving another man is not sinful",
-                "Pid": "15",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "I have read the bible and listened to my pastor. I know that I have commited sin, you are a doctor not a priest. Please, give me medication so that I can leave.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\",\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\",\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.",
-                                "text": "\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.",
-                                "text": "\"HIV isn't contracted through homosexual sex only, and it can only be passed on by someone who has HIV. You may be lucky and not have HIV.\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Check Symptoms\",\"Q2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Check Symptoms\",\"Q2\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Check Symptoms",
-                                "text": "\"Check Symptoms\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Q2",
-                                "text": "\"Q2\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "You deserve to get HIV for having sex with another man",
-                "Pid": "16",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "I will die because of you. You must remember that you have killed someone when you try to sleep at night, in your nice big house.",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"Goodbye\",\"Goodbye\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"Goodbye\",\"Goodbye\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "Goodbye",
-                                "text": "\"Goodbye\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "Q2",
-                "Pid": "17",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Double-click this passage to edit it.",
-                        "type": "text"
-                    }
-                ]
-            },
-            {
-                "Name": "Does this man have HIV?",
-                "Pid": "18",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "Double-click this passage to edit it.",
-                        "type": "text"
+                        "type": "hook"
                     }
                 ]
             }
