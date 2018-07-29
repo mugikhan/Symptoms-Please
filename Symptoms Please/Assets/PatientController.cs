@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using Cradle;
+using UnityEngine.UI;
 
 public class PatientController : MonoBehaviour {
     public List<string> patientSymptoms = new List<string>();
+
+    public Story HIVStory;
 
     private GameController gameControllerScript;
 
@@ -15,8 +19,14 @@ public class PatientController : MonoBehaviour {
     int x = 0;
     int y = 3;
 
+    public Text passageText;
+    public Text linkText;
+
     // Use this for initialization
     void Start () {
+        HIVStory = GameObject.FindGameObjectWithTag("Player").GetComponent<HIVArc>();
+        passageText = GameObject.FindGameObjectWithTag("Passage").GetComponent<Text>();
+        linkText = GameObject.FindGameObjectWithTag("Link").GetComponent<Text>();
         GameObject gameControllerObj = GameObject.FindGameObjectWithTag("GameController");
         if (gameControllerObj != null)
         {
@@ -26,6 +36,9 @@ public class PatientController : MonoBehaviour {
         {
             Debug.Log("Cannot find 'gameController' script");
         }
+
+        //HIVStory.OnOutput += HIVStory_OnOutput;
+        //HIVStory.Begin();
 
         int randNum = Random.Range(x, y);
 
@@ -44,7 +57,8 @@ public class PatientController : MonoBehaviour {
             sourceFile = new FileInfo("HepC.txt");
         }
         textReader = sourceFile.OpenText();
-        
+
+        print(HIVStory.GetCurrentText());
     }
 	
 	// Update is called once per frame
@@ -57,7 +71,17 @@ public class PatientController : MonoBehaviour {
                 patientSymptoms.Add(text);
             }
         }
-
+        //passageText = (StoryText)HIVStory.GetCurrentText();
+        //linkText = (StoryLink)HIVStory.GetCurrentLinks();
 
     }
+
+    void HIVStory_OnOutput(StoryOutput output)
+    {
+        // Do something with the output here
+        //Debug.Log(output.Text);
+        //var text = (StoryText)output;
+        //print(HIVStory.GetCurrentText());
+    }
+
 }

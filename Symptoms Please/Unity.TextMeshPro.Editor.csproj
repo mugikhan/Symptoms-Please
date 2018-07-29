@@ -295,6 +295,15 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Cradle">
+      <HintPath>Assets/Cradle/Cradle.dll</HintPath>
+    </Reference>
+    <Reference Include="Cradle.Editor">
+      <HintPath>Assets/Cradle/Editor/Cradle.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Nustache.Core">
+      <HintPath>Assets/Cradle/Editor/ThirdParty/Nustache/Nustache.Core.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/mugik/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
     </Reference>
@@ -389,6 +398,8 @@
     <Compile Include="Packages\com.unity.textmeshpro\Scripts\Editor\TMPro_TexturePostProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cradle\Editor\Templates\Story.template" />
+    <None Include="Assets\Cradle\Editor\ThirdParty\PhantomJS\third-party.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

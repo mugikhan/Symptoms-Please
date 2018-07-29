@@ -250,6 +250,9 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Cradle">
+      <HintPath>Assets/Cradle/Cradle.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/mugik/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -303,10 +306,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayer.cs" />
+    <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayerElement.cs" />
+    <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLayoutGroup.cs" />
+    <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLineBreak.cs" />
     <Compile Include="Assets\GameController.cs" />
+    <Compile Include="Assets\Keith Test Stuff\cues.cs" />
+    <Compile Include="Assets\Keith Test Stuff\HIVArc.cs" />
     <Compile Include="Assets\PatientController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Cradle\Editor\Templates\Story.template" />
+    <None Include="Assets\Cradle\Editor\ThirdParty\PhantomJS\third-party.txt" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />

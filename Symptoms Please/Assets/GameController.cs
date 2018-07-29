@@ -30,7 +30,7 @@ public class GameController : MonoBehaviour {
 
     public void OnSpawnBtnClick()
     {
-        Instantiate(patient, new Vector3(0, 0, 0), Quaternion.identity);
+        Instantiate(patient, new Vector3(0, -4.4f, 0), Quaternion.identity);
 
     }
 }
