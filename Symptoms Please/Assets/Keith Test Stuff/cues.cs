@@ -11,4 +11,9 @@ public class cues : MonoBehaviour {
 	void passage1_Done(){
 		Debug.Log("asd");
 	}
+
+    void Q1_Done()
+    {
+        Debug.Log("LINK");
+    }
 }
