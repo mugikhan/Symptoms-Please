@@ -314,6 +314,8 @@
     <Compile Include="Assets\Keith Test Stuff\cues.cs" />
     <Compile Include="Assets\Keith Test Stuff\HIVArc.cs" />
     <Compile Include="Assets\PatientController.cs" />
+    <Compile Include="Assets\ZoomControl.cs" />
+    <Compile Include="Assets\ZoomScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cradle\Editor\Templates\Story.template" />
