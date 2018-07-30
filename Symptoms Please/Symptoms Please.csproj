@@ -310,10 +310,12 @@
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayerElement.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLayoutGroup.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLineBreak.cs" />
+    <Compile Include="Assets\Cues.cs" />
     <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\Keith Test Stuff\cues.cs" />
     <Compile Include="Assets\Keith Test Stuff\HIVArc.cs" />
     <Compile Include="Assets\PatientController.cs" />
+    <Compile Include="Assets\Stories\Template.cs" />
     <Compile Include="Assets\ZoomControl.cs" />
     <Compile Include="Assets\ZoomScript.cs" />
   </ItemGroup>
