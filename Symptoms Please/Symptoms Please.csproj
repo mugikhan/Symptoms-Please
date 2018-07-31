@@ -254,10 +254,10 @@
       <HintPath>Assets/Cradle/Cradle.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/mugik/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/Kimita/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
-      <HintPath>C:/Users/mugik/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Kimita/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
@@ -310,14 +310,19 @@
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayerElement.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLayoutGroup.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLineBreak.cs" />
-    <Compile Include="Assets\Cues.cs" />
-    <Compile Include="Assets\GameController.cs" />
     <Compile Include="Assets\Keith Test Stuff\cues.cs" />
     <Compile Include="Assets\Keith Test Stuff\HIVArc.cs" />
-    <Compile Include="Assets\PatientController.cs" />
+    <Compile Include="Assets\Scripts\Cues.cs" />
+    <Compile Include="Assets\Scripts\Cues1.cs" />
+    <Compile Include="Assets\Scripts\Cues2.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\PatientController.cs" />
+    <Compile Include="Assets\Scripts\ZoomControl.cs" />
+    <Compile Include="Assets\Scripts\ZoomScript.cs" />
+    <Compile Include="Assets\Stories\Codeine.cs" />
+    <Compile Include="Assets\Stories\Diabetes.cs" />
+    <Compile Include="Assets\Stories\HealthyPatient.cs" />
     <Compile Include="Assets\Stories\Template.cs" />
-    <Compile Include="Assets\ZoomControl.cs" />
-    <Compile Include="Assets\ZoomScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cradle\Editor\Templates\Story.template" />

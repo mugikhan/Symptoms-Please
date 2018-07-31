@@ -19,7 +19,7 @@ public class ZoomControl : MonoBehaviour {
             {
                 diseaseType = hit.collider.gameObject.tag;
 
-                // Debug.Log(diseaseType);
+                //Debug.Log(diseaseType);
                 if (zoomActive == "0")
                 {
                     zoomActive = diseaseType;
