@@ -79,10 +79,6 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 
     // ---------------
     #endregion
-    void Start()
-    {
-        AdditionalCues.Add(GameObject.FindGameObjectWithTag("GameController"));
-    }
     // .............
     // #1: Illness
 

@@ -421,7 +421,6 @@ GameObject:
   m_Component:
   - component: {fileID: 983992159}
   - component: {fileID: 983992158}
-  - component: {fileID: 983992160}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -442,7 +441,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   btnSpawn: {fileID: 2106724092}
   x: 1
-  patient: {fileID: 4913420761038804, guid: 805a3be4ad03dd44d8697f23c46feb18, type: 2}
+  Liam: {fileID: 4913420761038804, guid: 805a3be4ad03dd44d8697f23c46feb18, type: 2}
+  Shane: {fileID: 4913420761038804, guid: 82c02a9399c60b9468e1f00c9009cd18, type: 2}
+  Rodwin: {fileID: 4913420761038804, guid: 502a928e8469cf84fbb577a2424e40eb, type: 2}
 --- !u!4 &983992159
 Transform:
   m_ObjectHideFlags: 0
@@ -456,19 +457,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &983992160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 983992157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72c2cda4a25b12b48a19a3e914526b5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scrollView: {fileID: 0}
-  content: {fileID: 0}
 --- !u!1 &1216685533
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,34 +877,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796409365}
   m_CullTransparentMesh: 0
---- !u!1 &1977214396
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1977214398}
-  m_Layer: 0
-  m_Name: CodeineCue
-  m_TagString: Codeine
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1977214398
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1977214396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 404.22003, y: 56.013573, z: 22.28897}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2106724090
 GameObject:
   m_ObjectHideFlags: 0
