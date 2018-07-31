@@ -53,7 +53,6 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	@Codeine()
 	{
-        
 		this.StartPassage = "Intro";
 
 		base.Vars = new VarDefs() { Story = this, StrictMode = true };
@@ -77,12 +76,13 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 		passage14_Init();
 	}
 
-    // ---------------
-    #endregion
-    // .............
-    // #1: Illness
+	// ---------------
+	#endregion
 
-    void passage1_Init()
+	// .............
+	// #1: Illness
+
+	void passage1_Init()
 	{
 		this.Passages[@"Illness"] = new StoryPassage(@"Illness", new string[]{  }, passage1_Main);
 	}
@@ -150,7 +150,7 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 			yield return text("	");
 			if(Vars.sy .Contains("nausea")) {
 				yield return lineBreak();
-				yield return text("Yes, I have had such a bad feeling whenever I sit down or stand up.");
+				yield return text("		Yes, I have had such a bad feeling whenever I sit down or stand up.");
 				yield return lineBreak();
 				yield return text("		");
 				yield return link("Have you lost your appetite?", "Appetite", null);
@@ -356,6 +356,7 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	{
 		yield return text("Patient: \"Doctor, I'm really sick. I have the flu and need cough medicine. It hurts when I cough. You told me I needed cough medicine last time.\"");
 		yield return lineBreak();
+		yield return lineBreak();
 		yield return text("Dr: Let me take a look at you.");
 		yield return lineBreak();
 		Vars.passage  = "Illness";
@@ -371,6 +372,7 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return link("have you ever been admitted to a clinic?", "Irritability story", null);
 		yield return lineBreak();
 		yield return link("How has your sleep been?", "Night sweats story", null);
+		yield return lineBreak();
 		yield return lineBreak();
 		yield return link("Tell me more about your symptoms.", "Illness", null);
 		yield break;
