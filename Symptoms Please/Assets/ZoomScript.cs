@@ -4,19 +4,33 @@ using UnityEngine;
 
 public class ZoomScript : MonoBehaviour {
 
+
+    public Camera[] zoomCam;
 	// Use this for initialization
 	void Start () {
-        GetComponent<Camera>().enabled = true;
+        for(int i =0; i< zoomCam.Length; i++)
+        {
+           zoomCam[i].GetComponent<Camera>().enabled = false;
+        }
+       
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(ZoomControl.zoomActive == "y")
+        Debug.Log("Zoom Active: " + ZoomControl.zoomActive);
+		if(ZoomControl.zoomActive != "0")
         {
-            GetComponent<Camera>().enabled = true; 
+            int index; 
+            int.TryParse(ZoomControl.zoomActive, out index);
+            //Debug.Log("Index: " + (index - 1));
+            zoomCam[index-1].GetComponent<Camera>().enabled = true;
+            
         } else
         {
-            GetComponent<Camera>().enabled = false; 
+            for (int i = 0; i < zoomCam.Length; i++)
+            {
+                zoomCam[i].GetComponent<Camera>().enabled = false;
+            }
         }
 
 	}
