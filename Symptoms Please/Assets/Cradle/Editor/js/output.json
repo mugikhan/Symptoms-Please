@@ -3,7 +3,7 @@
     "result": {
         "passages": [
             {
-                "Name": "TB",
+                "Name": "Illness",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
@@ -16,9 +16,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $sy to (a: \"weight_loss\", \"loss_of_appetite\", \"night_sweats\", \"fever\", \"coughing\", \"chills\",\"chest_pain\")",
+                        "innerText": "set: $sy to (a: \"fatigue\", \"high_blood_pressure\", \"weight_loss\", \"thirst\", \"hunger\", \"irritability\",\"frequent_urination\",\"frequent_infections\",\"blurred_vision\")",
                         "name": "set",
-                        "text": "(set: $sy to (a: \"weight_loss\", \"loss_of_appetite\", \"night_sweats\", \"fever\", \"coughing\", \"chills\",\"chest_pain\"))",
+                        "text": "(set: $sy to (a: \"fatigue\", \"high_blood_pressure\", \"weight_loss\", \"thirst\", \"hunger\", \"irritability\",\"frequent_urination\",\"frequent_infections\",\"blurred_vision\"))",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -46,13 +46,39 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "a: \"weight_loss\", \"loss_of_appetite\", \"night_sweats\", \"fever\", \"coughing\", \"chills\",\"chest_pain\"",
+                                "innerText": "a: \"fatigue\", \"high_blood_pressure\", \"weight_loss\", \"thirst\", \"hunger\", \"irritability\",\"frequent_urination\",\"frequent_infections\",\"blurred_vision\"",
                                 "name": "a",
-                                "text": "(a: \"weight_loss\", \"loss_of_appetite\", \"night_sweats\", \"fever\", \"coughing\", \"chills\",\"chest_pain\")",
+                                "text": "(a: \"fatigue\", \"high_blood_pressure\", \"weight_loss\", \"thirst\", \"hunger\", \"irritability\",\"frequent_urination\",\"frequent_infections\",\"blurred_vision\")",
                                 "tokens": [
                                     {
                                         "text": "a:",
                                         "type": "macroName"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "fatigue",
+                                        "text": "\"fatigue\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
+                                    },
+                                    {
+                                        "text": " ",
+                                        "type": "whitespace"
+                                    },
+                                    {
+                                        "innerText": "high_blood_pressure",
+                                        "text": "\"high_blood_pressure\"",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "text": ",",
+                                        "type": "comma"
                                     },
                                     {
                                         "text": " ",
@@ -72,8 +98,8 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "innerText": "loss_of_appetite",
-                                        "text": "\"loss_of_appetite\"",
+                                        "innerText": "thirst",
+                                        "text": "\"thirst\"",
                                         "type": "string"
                                     },
                                     {
@@ -85,8 +111,8 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "innerText": "night_sweats",
-                                        "text": "\"night_sweats\"",
+                                        "innerText": "hunger",
+                                        "text": "\"hunger\"",
                                         "type": "string"
                                     },
                                     {
@@ -98,8 +124,8 @@
                                         "type": "whitespace"
                                     },
                                     {
-                                        "innerText": "fever",
-                                        "text": "\"fever\"",
+                                        "innerText": "irritability",
+                                        "text": "\"irritability\"",
                                         "type": "string"
                                     },
                                     {
@@ -107,12 +133,8 @@
                                         "type": "comma"
                                     },
                                     {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "innerText": "coughing",
-                                        "text": "\"coughing\"",
+                                        "innerText": "frequent_urination",
+                                        "text": "\"frequent_urination\"",
                                         "type": "string"
                                     },
                                     {
@@ -120,12 +142,8 @@
                                         "type": "comma"
                                     },
                                     {
-                                        "text": " ",
-                                        "type": "whitespace"
-                                    },
-                                    {
-                                        "innerText": "chills",
-                                        "text": "\"chills\"",
+                                        "innerText": "frequent_infections",
+                                        "text": "\"frequent_infections\"",
                                         "type": "string"
                                     },
                                     {
@@ -133,8 +151,8 @@
                                         "type": "comma"
                                     },
                                     {
-                                        "innerText": "chest_pain",
-                                        "text": "\"chest_pain\"",
+                                        "innerText": "blurred_vision",
+                                        "text": "\"blurred_vision\"",
                                         "type": "string"
                                     }
                                 ],
@@ -178,9 +196,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $passage to \"TB\"",
+                        "innerText": "set: $passage to \"Illness\"",
                         "name": "set",
-                        "text": "(set: $passage to \"TB\")",
+                        "text": "(set: $passage to \"Illness\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -208,8 +226,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "TB",
-                                "text": "\"TB\"",
+                                "innerText": "Illness",
+                                "text": "\"Illness\"",
                                 "type": "string"
                             }
                         ],
@@ -220,9 +238,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $illness to \"TB\"",
+                        "innerText": "set: $illness to \"Illness\"",
                         "name": "set",
-                        "text": "(set: $illness to \"TB\")",
+                        "text": "(set: $illness to \"Illness\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -250,8 +268,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "TB",
-                                "text": "\"TB\"",
+                                "innerText": "Illness",
+                                "text": "\"Illness\"",
                                 "type": "string"
                             }
                         ],
@@ -262,17 +280,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Let us talk some more about your work and life\",$spassage",
+                        "innerText": "link-goto:\"Let us talk some more about your life\",$spassage",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Let us talk some more about your work and life\",$spassage)",
+                        "text": "(link-goto:\"Let us talk some more about your life\",$spassage)",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Let us talk some more about your work and life",
-                                "text": "\"Let us talk some more about your work and life\"",
+                                "innerText": "Let us talk some more about your life",
+                                "text": "\"Let us talk some more about your life\"",
                                 "type": "string"
                             },
                             {
@@ -534,8 +552,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you lost your appetite?|Appetite]]\t\n\t](else:)[\n\t\tNo, not at all.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]\n",
-                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you lost your appetite?|Appetite]]\t\n\t](else:)[\n\t\tNo, not at all.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]\n]",
+                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you lost your appetite?|Appetite]]\t\n\t](else:)[\n\t\tNo. Like I said. I'm fit as a fiddle.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]\n",
+                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you lost your appetite?|Appetite]]\t\n\t](else:)[\n\t\tNo. Like I said. I'm fit as a fiddle.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]\n]",
                         "tokens": [
                             {
                                 "text": "\n",
@@ -657,15 +675,15 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "\n\t\tNo, not at all.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t",
-                                "text": "[\n\t\tNo, not at all.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]",
+                                "innerText": "\n\t\tNo. Like I said. I'm fit as a fiddle.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t",
+                                "text": "[\n\t\tNo. Like I said. I'm fit as a fiddle.\n\t\t[[Do you have any phlegm in your throat or chest?|Phlegm]]\n\t]",
                                 "tokens": [
                                     {
                                         "text": "\n",
                                         "type": "br"
                                     },
                                     {
-                                        "text": "\t\tNo, not at all.",
+                                        "text": "\t\tNo. Like I said. I'm fit as a fiddle.",
                                         "type": "text"
                                     },
                                     {
@@ -733,8 +751,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\tNo, not at all.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]\n",
-                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\tNo, not at all.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]\n]",
+                        "innerText": "\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\tOnly when I get these intense cravings and eat too much.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]\n",
+                        "text": "[\n\t(if: $sy contains \"nausea\")[\n\t\tYes, I have had such a bad feeling whenever I sit down or stand up.\n\t\t[[Have you been getting headaches?|Headaches]]\n\t](else:)[\n\t\tOnly when I get these intense cravings and eat too much.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]\n]",
                         "tokens": [
                             {
                                 "text": "\n",
@@ -852,15 +870,15 @@
                                 "type": "macro"
                             },
                             {
-                                "innerText": "\n\t\tNo, not at all.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t",
-                                "text": "[\n\t\tNo, not at all.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]",
+                                "innerText": "\n\t\tOnly when I get these intense cravings and eat too much.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t",
+                                "text": "[\n\t\tOnly when I get these intense cravings and eat too much.\n\t\t[[Have you been struggling to breath or been breathing heavily?|Short of breath]]\n\t]",
                                 "tokens": [
                                     {
                                         "text": "\n",
                                         "type": "br"
                                     },
                                     {
-                                        "text": "\t\tNo, not at all.",
+                                        "text": "\t\tOnly when I get these intense cravings and eat too much.",
                                         "type": "text"
                                     },
                                     {
@@ -1405,8 +1423,8 @@
                         "type": "macro"
                     },
                     {
-                        "innerText": "\n\tNo my throat is very clear and I don't feel any phlegm.\n\tYou have the TB\n",
-                        "text": "[\n\tNo my throat is very clear and I don't feel any phlegm.\n\tYou have the TB\n]",
+                        "innerText": "\n\tNo my throat is very clear and I don't feel any phlegm.\n\t\n",
+                        "text": "[\n\tNo my throat is very clear and I don't feel any phlegm.\n\t\n]",
                         "tokens": [
                             {
                                 "text": "\n",
@@ -1421,7 +1439,7 @@
                                 "type": "br"
                             },
                             {
-                                "text": "\tYou have the TB",
+                                "text": "\t",
                                 "type": "text"
                             },
                             {
@@ -2135,7 +2153,7 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Patient: This is actually my second time back this week. I just don’t seem to be getting any better. I saw another doctor and he said I have TB but he has no idea what he’s talking about. I’m not coughing blood at all.",
+                        "text": "Patient: \"I came here on the recommendation of my partner. They say they're worried about my health. They think my immune system is weak from all that pap I eat and all that coke I drink but I'm fit as a fiddle. I'm just here for their peace of mind.\"",
                         "type": "text"
                     },
                     {
@@ -2143,7 +2161,11 @@
                         "type": "br"
                     },
                     {
-                        "text": "Dr: Well let's take a look and see what we can see. Tell me,",
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "Dr: Well let's see then.",
                         "type": "text"
                     },
                     {
@@ -2151,9 +2173,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $passage to \"TB\"",
+                        "innerText": "set: $passage to \"Illness\"",
                         "name": "set",
-                        "text": "(set: $passage to \"TB\")",
+                        "text": "(set: $passage to \"Illness\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -2181,8 +2203,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "TB",
-                                "text": "\"TB\"",
+                                "innerText": "Illness",
+                                "text": "\"Illness\"",
                                 "type": "string"
                             }
                         ],
@@ -2307,17 +2329,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"have you been feeling unusually tired at all?\",\"Fatigue story\"",
+                        "innerText": "link-goto:\"have you been feeling unusually tired?\",\"Fatigue story\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"have you been feeling unusually tired at all?\",\"Fatigue story\")",
+                        "text": "(link-goto:\"have you been feeling unusually tired?\",\"Fatigue story\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "have you been feeling unusually tired at all?",
-                                "text": "\"have you been feeling unusually tired at all?\"",
+                                "innerText": "have you been feeling unusually tired?",
+                                "text": "\"have you been feeling unusually tired?\"",
                                 "type": "string"
                             },
                             {
@@ -2337,17 +2359,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Have you been coughing or had any chest pains?\",\"Coughing story\"",
+                        "innerText": "link-goto:\"Have you been feeling hungry?\",\"Hunger story\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Have you been coughing or had any chest pains?\",\"Coughing story\")",
+                        "text": "(link-goto:\"Have you been feeling hungry?\",\"Hunger story\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Have you been coughing or had any chest pains?",
-                                "text": "\"Have you been coughing or had any chest pains?\"",
+                                "innerText": "Have you been feeling hungry?",
+                                "text": "\"Have you been feeling hungry?\"",
                                 "type": "string"
                             },
                             {
@@ -2355,8 +2377,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Coughing story",
-                                "text": "\"Coughing story\"",
+                                "innerText": "Hunger story",
+                                "text": "\"Hunger story\"",
                                 "type": "string"
                             }
                         ],
@@ -2367,17 +2389,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"How has your sleep been?\",\"Night sweats story\"",
+                        "innerText": "link-goto:\"How have your relationships with friends and family been? \",\"Irritability story\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"How has your sleep been?\",\"Night sweats story\")",
+                        "text": "(link-goto:\"How have your relationships with friends and family been? \",\"Irritability story\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "How has your sleep been?",
-                                "text": "\"How has your sleep been?\"",
+                                "innerText": "How have your relationships with friends and family been? ",
+                                "text": "\"How have your relationships with friends and family been? \"",
                                 "type": "string"
                             },
                             {
@@ -2385,8 +2407,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Night sweats story",
-                                "text": "\"Night sweats story\"",
+                                "innerText": "Irritability story",
+                                "text": "\"Irritability story\"",
                                 "type": "string"
                             }
                         ],
@@ -2397,17 +2419,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"I'm the doctor here. Tell me about your symptoms\",\"TB\"",
+                        "innerText": "link-goto:\"Notice anything abnormal about your body?.\",\"Illness\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"I'm the doctor here. Tell me about your symptoms\",\"TB\")",
+                        "text": "(link-goto:\"Notice anything abnormal about your body?.\",\"Illness\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "I'm the doctor here. Tell me about your symptoms",
-                                "text": "\"I'm the doctor here. Tell me about your symptoms\"",
+                                "innerText": "Notice anything abnormal about your body?.",
+                                "text": "\"Notice anything abnormal about your body?.\"",
                                 "type": "string"
                             },
                             {
@@ -2415,8 +2437,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "TB",
-                                "text": "\"TB\"",
+                                "innerText": "Illness",
+                                "text": "\"Illness\"",
                                 "type": "string"
                             }
                         ],
@@ -2425,12 +2447,12 @@
                 ]
             },
             {
-                "Name": "Work",
+                "Name": "Family History",
                 "Pid": "9",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "I'm a security guard at the mall. I start my shift at 6PM and end at 4AM the next day, then I walk to catch the taxi back home and arrive home at 5:30AM. I'm always so tired and don't see my children because they leave before I get home. The cold weather must be causing me to catch a cold, but I can't have a cold because they won't want me to work and I can't miss work. Please find me some medicine for the cold and I'll be on my way so that I can sleep before tonight.",
+                        "text": "My family does have a history of diabetes. My brother recently got diagnosed and my father has had it for ages. I guess the signs are there and I'm at risk. My family is worried about me and I'm a bit worried too.",
                         "type": "text"
                     },
                     {
@@ -2438,9 +2460,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $spassage to \"Work\"",
+                        "innerText": "set: $spassage to \"Family History\"",
                         "name": "set",
-                        "text": "(set: $spassage to \"Work\")",
+                        "text": "(set: $spassage to \"Family History\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -2468,8 +2490,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "Work",
-                                "text": "\"Work\"",
+                                "innerText": "Family History",
+                                "text": "\"Family History\"",
                                 "type": "string"
                             }
                         ],
@@ -2627,7 +2649,7 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Yeah I have, but I always do when I'm stressed and I've been working really hard recently. It's just stress.",
+                        "text": "I don't see how my diet is a problem. I eat as much of anything I want and ifanything, I've lost weight in the past year.",
                         "type": "text"
                     },
                     {
@@ -2677,17 +2699,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"What's your profession?\",\"Work\"",
+                        "innerText": "link-goto:\"Does your family have a history of illness?\",\"Family History\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"What's your profession?\",\"Work\")",
+                        "text": "(link-goto:\"Does your family have a history of illness?\",\"Family History\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "What's your profession?",
-                                "text": "\"What's your profession?\"",
+                                "innerText": "Does your family have a history of illness?",
+                                "text": "\"Does your family have a history of illness?\"",
                                 "type": "string"
                             },
                             {
@@ -2695,8 +2717,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Work",
-                                "text": "\"Work\"",
+                                "innerText": "Family History",
+                                "text": "\"Family History\"",
                                 "type": "string"
                             }
                         ],
@@ -2740,7 +2762,7 @@
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "I've been working the night shift and it's winter so of course I'll be feeling tired.",
+                        "text": "I have trouble climbing the stairs at home but I think that's just me getting older.",
                         "type": "text"
                     },
                     {
@@ -2790,17 +2812,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Tell me about your work, what do you do?\",\"Work\"",
+                        "innerText": "link-goto:\"Does your family have any history of illness?\",\"Family History\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Tell me about your work, what do you do?\",\"Work\")",
+                        "text": "(link-goto:\"Does your family have any history of illness?\",\"Family History\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Tell me about your work, what do you do?",
-                                "text": "\"Tell me about your work, what do you do?\"",
+                                "innerText": "Does your family have any history of illness?",
+                                "text": "\"Does your family have any history of illness?\"",
                                 "type": "string"
                             },
                             {
@@ -2808,8 +2830,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Work",
-                                "text": "\"Work\"",
+                                "innerText": "Family History",
+                                "text": "\"Family History\"",
                                 "type": "string"
                             }
                         ],
@@ -2848,12 +2870,12 @@
                 ]
             },
             {
-                "Name": "Coughing story",
+                "Name": "Hunger story",
                 "Pid": "12",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "At home the only way to keep warm is with the fire, so we light it in the evenings but the smoke always gets everywhere because we also block the holes for the wind. At work I'm also coughing now because the cold air hurts my chest.",
+                        "text": "I eat way more than I used to but I see now problem with it. My grandmother always used to say an apppetite of any kind was healthy. I snack throughout the day. Mostly from the vending machine at work.",
                         "type": "text"
                     },
                     {
@@ -2861,9 +2883,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $spassage to \"Coughing story\"",
+                        "innerText": "set: $spassage to \"Hunger story\"",
                         "name": "set",
-                        "text": "(set: $spassage to \"Coughing story\")",
+                        "text": "(set: $spassage to \"Hunger story\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -2891,8 +2913,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "Coughing story",
-                                "text": "\"Coughing story\"",
+                                "innerText": "Hunger story",
+                                "text": "\"Hunger story\"",
                                 "type": "string"
                             }
                         ],
@@ -2903,17 +2925,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"Tell me about your work, what do you do?\",\"Work\"",
+                        "innerText": "link-goto:\"Does your family have a history of illness?\",\"Family History\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"Tell me about your work, what do you do?\",\"Work\")",
+                        "text": "(link-goto:\"Does your family have a history of illness?\",\"Family History\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "Tell me about your work, what do you do?",
-                                "text": "\"Tell me about your work, what do you do?\"",
+                                "innerText": "Does your family have a history of illness?",
+                                "text": "\"Does your family have a history of illness?\"",
                                 "type": "string"
                             },
                             {
@@ -2921,8 +2943,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Work",
-                                "text": "\"Work\"",
+                                "innerText": "Family History",
+                                "text": "\"Family History\"",
                                 "type": "string"
                             }
                         ],
@@ -2961,12 +2983,12 @@
                 ]
             },
             {
-                "Name": "Night sweats story",
+                "Name": "Irritability story",
                 "Pid": "13",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "I can't sleep recently. Last month I had to shoot a man at work and I haven't slept well since. I work the night shift so I only sleep in the morning and I always wake up hot and sweating.",
+                        "text": "My family gets on my nerves and I get annoyed with the noise my collegues make. They call me \"irritable\" but I think it's justified for the hell they put me through.",
                         "type": "text"
                     },
                     {
@@ -2974,9 +2996,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "set: $spassage to \"Night sweats story\"",
+                        "innerText": "set: $spassage to \"Irritability story\"",
                         "name": "set",
-                        "text": "(set: $spassage to \"Night sweats story\")",
+                        "text": "(set: $spassage to \"Irritability story\")",
                         "tokens": [
                             {
                                 "text": "set:",
@@ -3004,8 +3026,8 @@
                                 "type": "whitespace"
                             },
                             {
-                                "innerText": "Night sweats story",
-                                "text": "\"Night sweats story\"",
+                                "innerText": "Irritability story",
+                                "text": "\"Irritability story\"",
                                 "type": "string"
                             }
                         ],
@@ -3016,17 +3038,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"What work do you do?\",\"Work\"",
+                        "innerText": "link-goto:\"Does your family have a history of illness\",\"Family History\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"What work do you do?\",\"Work\")",
+                        "text": "(link-goto:\"Does your family have a history of illness\",\"Family History\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "What work do you do?",
-                                "text": "\"What work do you do?\"",
+                                "innerText": "Does your family have a history of illness",
+                                "text": "\"Does your family have a history of illness\"",
                                 "type": "string"
                             },
                             {
@@ -3034,8 +3056,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "Work",
-                                "text": "\"Work\"",
+                                "innerText": "Family History",
+                                "text": "\"Family History\"",
                                 "type": "string"
                             }
                         ],

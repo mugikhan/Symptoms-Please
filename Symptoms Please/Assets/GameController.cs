@@ -6,11 +6,6 @@ using System;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour {
-    public List<string> symptomsList = new List<string>();
-
-    protected FileInfo sourceFile = null;
-    protected StreamReader textReader = null;
-    protected string text = " ";
 
     public Button btnSpawn;
 
@@ -18,9 +13,10 @@ public class GameController : MonoBehaviour {
 
     public Transform patient;
 
+    private Cues cueScript;
     // Use this for initialization
     void Start () {
-
+        cueScript = GameObject.FindGameObjectWithTag("GameController").GetComponent<Cues>();
     }
 	
 	// Update is called once per frame
@@ -31,6 +27,6 @@ public class GameController : MonoBehaviour {
     public void OnSpawnBtnClick()
     {
         Instantiate(patient, new Vector3(0, 0, -1f), Quaternion.identity);
-
+        cueScript.GetScrollView();
     }
 }

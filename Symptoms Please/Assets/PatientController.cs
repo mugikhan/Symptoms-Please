@@ -75,13 +75,4 @@ public class PatientController : MonoBehaviour {
         //linkText = (StoryLink)HIVStory.GetCurrentLinks();
 
     }
-
-    void HIVStory_OnOutput(StoryOutput output)
-    {
-        // Do something with the output here
-        //Debug.Log(output.Text);
-        //var text = (StoryText)output;
-        //print(HIVStory.GetCurrentText());
-    }
-
 }

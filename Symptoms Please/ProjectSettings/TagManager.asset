@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Passage
   - Link
+  - Scrollview
+  - Codeine
   layers:
   - Default
   - TransparentFX

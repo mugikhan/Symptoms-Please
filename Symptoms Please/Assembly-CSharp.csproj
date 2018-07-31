@@ -70,6 +70,9 @@
     <Compile Include="Assets\Keith Test Stuff\cues.cs" />
     <Compile Include="Assets\Keith Test Stuff\HIVArc.cs" />
     <Compile Include="Assets\PatientController.cs" />
+    <Compile Include="Assets\Stories\Codeine.cs" />
+    <Compile Include="Assets\Stories\Diabetes.cs" />
+    <Compile Include="Assets\Stories\HealthyPatient.cs" />
     <Compile Include="Assets\Stories\Template.cs" />
     <Compile Include="Assets\ZoomControl.cs" />
     <Compile Include="Assets\ZoomScript.cs" />
