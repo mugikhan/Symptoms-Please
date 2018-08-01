@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 114474905349129154}
   m_Layer: 0
   m_Name: HealthyCue
-  m_TagString: Helathy
+  m_TagString: Healthy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224360967285156530}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

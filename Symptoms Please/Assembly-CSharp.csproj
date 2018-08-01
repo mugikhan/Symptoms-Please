@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\animationController.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayer.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\TwineTextPlayerElement.cs" />
     <Compile Include="Assets\Cradle\TwineTextPlayer\Core\WrapLayoutGroup.cs" />
