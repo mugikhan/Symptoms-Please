@@ -18,17 +18,18 @@ using Cradle.StoryFormats.Harlowe;
 public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 {
 	#region Variables
+
 	// ---------------
 
 	public class VarDefs: RuntimeVars
 	{
-		public VarDefs()
+		public VarDefs ()
 		{
-			VarDef("sy", () => this.@sy, val => this.@sy = val);
-			VarDef("passage", () => this.@passage, val => this.@passage = val);
-			VarDef("illness", () => this.@illness, val => this.@illness = val);
-			VarDef("spassage", () => this.@spassage, val => this.@spassage = val);
-			VarDef("ready", () => this.@ready, val => this.@ready = val);
+			VarDef ("sy", () => this.@sy, val => this.@sy = val);
+			VarDef ("passage", () => this.@passage, val => this.@passage = val);
+			VarDef ("illness", () => this.@illness, val => this.@illness = val);
+			VarDef ("spassage", () => this.@spassage, val => this.@spassage = val);
+			VarDef ("ready", () => this.@ready, val => this.@ready = val);
 		}
 
 		public StoryVar @sy;
@@ -38,68 +39,75 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 		public StoryVar @ready;
 	}
 
-	public new VarDefs Vars
-	{
-		get { return (VarDefs) base.Vars; }
+	public new VarDefs Vars {
+		get { return (VarDefs)base.Vars; }
 	}
 
 	// ---------------
+
 	#endregion
 
 	#region Initialization
+
 	// ---------------
 
 	public readonly Cradle.StoryFormats.Harlowe.HarloweRuntimeMacros macros1;
 
-	@Codeine()
+	@Codeine ()
 	{
+        
 		this.StartPassage = "Intro";
 
-		base.Vars = new VarDefs() { Story = this, StrictMode = true };
+		base.Vars = new VarDefs () { Story = this, StrictMode = true };
 
-		macros1 = new Cradle.StoryFormats.Harlowe.HarloweRuntimeMacros() { Story = this };
+		macros1 = new Cradle.StoryFormats.Harlowe.HarloweRuntimeMacros () { Story = this };
 
-		base.Init();
-		passage1_Init();
-		passage2_Init();
-		passage3_Init();
-		passage4_Init();
-		passage5_Init();
-		passage6_Init();
-		passage7_Init();
-		passage8_Init();
-		passage9_Init();
-		passage10_Init();
-		passage11_Init();
-		passage12_Init();
-		passage13_Init();
-		passage14_Init();
+		base.Init ();
+		passage1_Init ();
+		passage2_Init ();
+		passage3_Init ();
+		passage4_Init ();
+		passage5_Init ();
+		passage6_Init ();
+		passage7_Init ();
+		passage8_Init ();
+		passage9_Init ();
+		passage10_Init ();
+		passage11_Init ();
+		passage12_Init ();
+		passage13_Init ();
+		passage14_Init ();
 	}
 
 	// ---------------
+
 	#endregion
 
+	void Start ()
+	{
+		AdditionalCues.Add (GameObject.FindGameObjectWithTag ("GameController"));
+	}
 	// .............
 	// #1: Illness
 
-	void passage1_Init()
+	void passage1_Init ()
 	{
-		this.Passages[@"Illness"] = new StoryPassage(@"Illness", new string[]{  }, passage1_Main);
+		this.Passages [@"Illness"] = new StoryPassage (@"Illness", new string[]{ }, passage1_Main);
 	}
 
-	IStoryThread passage1_Main()
+	IStoryThread passage1_Main ()
 	{
-		yield return text("Okay, what do you want to know?");
-		yield return lineBreak();
-		Vars.sy  = macros1.a("headaches", "abdominal_pain", "night_sweats", "irritability", "confusion", "vomiting","loss_of_appetite","nausea");
-		yield return lineBreak();
-		yield return link("Have you had a fever?", "Fever", null);
-		yield return lineBreak();
-		Vars.passage  = "Illness";
-		yield return lineBreak();
-		Vars.illness  = "Illness";
-		yield return lineBreak();
-		yield return link("Tell me more about your life", Vars.spassage, null);
+		yield return text ("Okay, what do you want to know?");
+		
+		Vars.sy = macros1.a ("headaches", "abdominal_pain", "night_sweats", "irritability", "confusion", "vomiting", "loss_of_appetite", "nausea");
+		
+		yield return link ("Have you been experiencing a fever?\n", "Fever", null);
+		
+		Vars.passage = "Illness";
+		
+		Vars.illness = "Illness";
+		
+		yield return link ("Tell me more about your life\n", Vars.spassage, null);
 		yield break;
 	}
 
@@ -107,30 +115,29 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #2: Fever
 
-	void passage2_Init()
+	void passage2_Init ()
 	{
-		this.Passages[@"Fever"] = new StoryPassage(@"Fever", new string[]{  }, passage2_Main);
+		this.Passages [@"Fever"] = new StoryPassage (@"Fever", new string[]{ }, passage2_Main);
 	}
 
-	IStoryThread passage2_Main()
+	IStoryThread passage2_Main ()
 	{
-		if(Vars.sy .Contains("fever")) {
-			yield return lineBreak();
-			yield return text("	Yes. I feel hotter than usual. I'm burning up.");
-			yield return lineBreak();
+		if (Vars.sy.Contains ("fever")) {
+			
+			yield return text ("Yes. I feel hotter than usual. I'm burning up.");
+			
+		} else {
+			
+			yield return text ("I haven't been having a fever.");
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	I haven't been having a fever.");
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return link("Have you been experiencing nausea?", "Nausea", null);
-		yield return lineBreak();
-		Vars.passage  = "Fever";
-		yield return lineBreak();
-		yield return link("Tell me more about how you feel.", Vars.spassage, null);
+		
+		
+		yield return link ("Have you been experiencing nausea?\n", "Nausea", null);
+		
+		Vars.passage = "Fever";
+		
+		yield return link ("Tell me more about how you feel.\n", Vars.spassage, null);
 		yield break;
 	}
 
@@ -138,64 +145,61 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #3: Nausea
 
-	void passage3_Init()
+	void passage3_Init ()
 	{
-		this.Passages[@"Nausea"] = new StoryPassage(@"Nausea", new string[]{  }, passage3_Main);
+		this.Passages [@"Nausea"] = new StoryPassage (@"Nausea", new string[]{ }, passage3_Main);
 	}
 
-	IStoryThread passage3_Main()
+	IStoryThread passage3_Main ()
 	{
-		if(Vars.sy .Contains("fever")) {
-			yield return lineBreak();
-			yield return text("	");
-			if(Vars.sy .Contains("nausea")) {
-				yield return lineBreak();
-				yield return text("		Yes, I have had such a bad feeling whenever I sit down or stand up.");
-				yield return lineBreak();
-				yield return text("		");
-				yield return link("Have you lost your appetite?", "Appetite", null);
-				yield return text("	");
-				yield return lineBreak();
-				yield return text("	");
+		if (Vars.sy.Contains ("fever")) {
+			
+			
+			if (Vars.sy.Contains ("nausea")) {
+				
+				yield return text ("Yes, I have had such a bad feeling whenever I sit down or stand up.");
+				
+				
+				yield return link ("Have you lost your appetite?", "Appetite", null);
+				
+				
+				
+			} else {
+				
+				yield return text ("No, not at all.");
+				
+				
+				yield return link ("Do you have any phlegm in your throat or chest?", "Phlegm", null);
+				
+				
 			}
-			else {
-				yield return lineBreak();
-				yield return text("		No, not at all.");
-				yield return lineBreak();
-				yield return text("		");
-				yield return link("Do you have any phlegm in your throat or chest?", "Phlegm", null);
-				yield return lineBreak();
-				yield return text("	");
+			
+		} else {
+			
+			
+			if (Vars.sy.Contains ("nausea")) {
+				
+				yield return text ("Yes, sometimes I struggle to even stand up. Lying down is all that helps me with this flu.");
+				
+				
+				yield return link ("Have you been getting headaches?\n", "Headaches", null);
+				
+				
+			} else {
+				
+				yield return text ("No, not at all.");
+				
+				
+				yield return link ("Have you been struggling to breath or been breathing heavily?\n", "Short of breath", null);
+				
+				
 			}
-			yield return lineBreak();
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	");
-			if(Vars.sy .Contains("nausea")) {
-				yield return lineBreak();
-				yield return text("		Yes, sometimes I struggle to even stand up. Lying down is all that helps me with this flu.");
-				yield return lineBreak();
-				yield return text("		");
-				yield return link("Have you been getting headaches?", "Headaches", null);
-				yield return lineBreak();
-				yield return text("	");
-			}
-			else {
-				yield return lineBreak();
-				yield return text("		No, not at all.");
-				yield return lineBreak();
-				yield return text("		");
-				yield return link("Have you been struggling to breath or been breathing heavily?", "Short of breath", null);
-				yield return lineBreak();
-				yield return text("	");
-			}
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		Vars.passage  = "Nausea";
-		yield return lineBreak();
-		yield return link("Let us talk some more about your life", Vars.spassage, null);
+		
+		Vars.passage = "Nausea";
+		
+		yield return link ("Let us talk some more about your life\n", Vars.spassage, null);
 		yield break;
 	}
 
@@ -203,35 +207,34 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #4: Appetite
 
-	void passage4_Init()
+	void passage4_Init ()
 	{
-		this.Passages[@"Appetite"] = new StoryPassage(@"Appetite", new string[]{  }, passage4_Main);
+		this.Passages [@"Appetite"] = new StoryPassage (@"Appetite", new string[]{ }, passage4_Main);
 	}
 
-	IStoryThread passage4_Main()
+	IStoryThread passage4_Main ()
 	{
-		if(Vars.sy .Contains(v("all").AsMemberOf[macros1.a("fever","nausea","loss_of_appetite")])) {
-			yield return lineBreak();
-			yield return text("	Yes, I haven't felt hungry recently but it's saving me money.");
-			yield return lineBreak();
-			yield return text("	You have hepatitus A");
-			yield return lineBreak();
+		if (Vars.sy.Contains ("fever") && Vars.sy.Contains ("nausea") && Vars.sy.Contains ("loss_of_appetite")) {
+			
+			yield return text ("Yes, I haven't felt hungry recently but it's saving me money.");
+			
+			yield return text ("You have hepatitus A");
+			
+		} else {
+			
+			yield return text ("No, I'm as hungry as I always am.");
+			
+			yield return text ("You have pneumonia");
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	No, I'm as hungry as I always am.");
-			yield return lineBreak();
-			yield return text("	You have pneumonia");
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		yield return link("I am ready to make a diagnosis", "Diagnose", null);
-		yield return lineBreak();
-		Vars.passage  = "Appetite";
-		yield return lineBreak();
-		yield return link("Let us talk some more about your life", Vars.spassage, null);
-		yield return lineBreak();
-		Vars.ready  = "yes";
+		
+		yield return link ("I am ready to make a diagnosis\n", "Diagnose", null);
+		
+		Vars.passage = "Appetite";
+		
+		yield return link ("Let us talk some more about your life\n", Vars.spassage, null);
+		
+		Vars.ready = "yes";
 		yield break;
 	}
 
@@ -239,35 +242,34 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #5: Phlegm
 
-	void passage5_Init()
+	void passage5_Init ()
 	{
-		this.Passages[@"Phlegm"] = new StoryPassage(@"Phlegm", new string[]{  }, passage5_Main);
+		this.Passages [@"Phlegm"] = new StoryPassage (@"Phlegm", new string[]{ }, passage5_Main);
 	}
 
-	IStoryThread passage5_Main()
+	IStoryThread passage5_Main ()
 	{
-		if(Vars.sy .Contains(v("all").AsMemberOf[macros1.a("fever","nausea","phlegm")])) {
-			yield return lineBreak();
-			yield return text("	Yes and it comes up when I cough. It's especially bad when I wake up.");
-			yield return lineBreak();
-			yield return text("	You have the flu");
-			yield return lineBreak();
+		if (Vars.sy.Contains ("fever") && Vars.sy.Contains ("nausea") && Vars.sy.Contains ("phlegm")) {
+			
+			yield return text ("Yes and it comes up when I cough. It's especially bad when I wake up.");
+			
+			yield return text ("You have the flu");
+			
+		} else {
+			
+			yield return text ("No my throat is very clear and I don't feel any phlegm.");
+			
+			
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	No my throat is very clear and I don't feel any phlegm.");
-			yield return lineBreak();
-			yield return text("	");
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		yield return link("I am ready to make a diagnosis", "Diagnose", null);
-		yield return lineBreak();
-		Vars.passage  = "Phlegm";
-		yield return lineBreak();
-		yield return link("Let us talk some more about your life", Vars.spassage, null);
-		yield return lineBreak();
-		Vars.ready  = "yes";
+		
+		yield return link ("I am ready to make a diagnosis\n", "Diagnose", null);
+		
+		Vars.passage = "Phlegm";
+		
+		yield return link ("Let us talk some more about your life\n", Vars.spassage, null);
+		
+		Vars.ready = "yes";
 		yield break;
 	}
 
@@ -275,35 +277,34 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #6: Headaches
 
-	void passage6_Init()
+	void passage6_Init ()
 	{
-		this.Passages[@"Headaches"] = new StoryPassage(@"Headaches", new string[]{  }, passage6_Main);
+		this.Passages [@"Headaches"] = new StoryPassage (@"Headaches", new string[]{ }, passage6_Main);
 	}
 
-	IStoryThread passage6_Main()
+	IStoryThread passage6_Main ()
 	{
-		if(Vars.sy .Contains(v("all").AsMemberOf[macros1.a("nausea","headaches")])) {
-			yield return lineBreak();
-			yield return text("	Yes very sore headaches!");
-			yield return lineBreak();
-			yield return text("	you have codein");
-			yield return lineBreak();
+		if (Vars.sy.Contains ("nausea") && Vars.sy.Contains ("headaches")) {
+			
+			yield return text ("Yes very sore headaches!");
+			
+			yield return text ("you have codein");
+			
+		} else {
+			
+			yield return text ("No, I haven't been getting any headaches.");
+			
+			yield return text ("you have stress");
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	No, I haven't been getting any headaches.");
-			yield return lineBreak();
-			yield return text("	you have stress");
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		yield return link("I am ready to make a diagnosis", "Diagnose", null);
-		yield return lineBreak();
-		Vars.passage  = "Headaches";
-		yield return lineBreak();
-		yield return link("Let us talk some more about your work and life", Vars.spassage, null);
-		yield return lineBreak();
-		Vars.ready  = "yes";
+		
+		yield return link ("I am ready to make a diagnosis\n", "Diagnose", null);
+		
+		Vars.passage = "Headaches";
+		
+		yield return link ("Let us talk some more about your work and life\n", Vars.spassage, null);
+		
+		Vars.ready = "yes";
 		yield break;
 	}
 
@@ -311,35 +312,34 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #7: Short of breath
 
-	void passage7_Init()
+	void passage7_Init ()
 	{
-		this.Passages[@"Short of breath"] = new StoryPassage(@"Short of breath", new string[]{  }, passage7_Main);
+		this.Passages [@"Short of breath"] = new StoryPassage (@"Short of breath", new string[]{ }, passage7_Main);
 	}
 
-	IStoryThread passage7_Main()
+	IStoryThread passage7_Main ()
 	{
-		if(Vars.sy .Contains(macros1.a("short_of_breath"))) {
-			yield return lineBreak();
-			yield return text("	Yes, I often struggle to catch my breath and start feeling short of breath even when I don't exercise.");
-			yield return lineBreak();
-			yield return text("	you have hypertension");
-			yield return lineBreak();
+		if (Vars.sy.Contains (macros1.a ("short_of_breath"))) {
+			
+			yield return text ("Yes, I often struggle to catch my breath and start feeling short of breath even when I don't exercise.");
+			
+			yield return text ("you have hypertension");
+			
+		} else {
+			
+			yield return text ("No. I do feel it when I go up stairs but that is normal for me.");
+			
+			yield return text ("you have diabetes");
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return text("	No. I do feel it when I go up stairs but that is normal for me.");
-			yield return lineBreak();
-			yield return text("	you have diabetes");
-			yield return lineBreak();
-		}
-		yield return lineBreak();
-		yield return link("I am ready to make a diagnosis", "Diagnose", null);
-		yield return lineBreak();
-		Vars.passage  = "Short of breath";
-		yield return lineBreak();
-		yield return link("Let us talk some more about your work and life", Vars.spassage, null);
-		yield return lineBreak();
-		Vars.ready  = "yes";
+		
+		yield return link ("I am ready to make a life\n", "Diagnose", null);
+		
+		Vars.passage = "Short of breath";
+		
+		yield return link ("Let us talk some more about your work and life\n", Vars.spassage, null);
+		
+		Vars.ready = "yes";
 		yield break;
 	}
 
@@ -347,34 +347,28 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #8: Intro
 
-	void passage8_Init()
+	void passage8_Init ()
 	{
-		this.Passages[@"Intro"] = new StoryPassage(@"Intro", new string[]{  }, passage8_Main);
+		this.Passages [@"Intro"] = new StoryPassage (@"Intro", new string[]{ }, passage8_Main);
 	}
 
-	IStoryThread passage8_Main()
+	IStoryThread passage8_Main ()
 	{
-		yield return text("Patient: \"Doctor, I'm really sick. I have the flu and need cough medicine. It hurts when I cough. You told me I needed cough medicine last time.\"");
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return text("Dr: Let me take a look at you.");
-		yield return lineBreak();
-		Vars.passage  = "Illness";
-		yield return lineBreak();
-		Vars.spassage  = "Intro";
-		yield return lineBreak();
-		Vars.ready  = "no";
-		yield return lineBreak();
-		yield return link("have you had a fever?", "Fever Story", null);
-		yield return lineBreak();
-		yield return link("you seem a bit confused?", "Confusion story", null);
-		yield return lineBreak();
-		yield return link("have you ever been admitted to a clinic?", "Irritability story", null);
-		yield return lineBreak();
-		yield return link("How has your sleep been?", "Night sweats story", null);
-		yield return lineBreak();
-		yield return lineBreak();
-		yield return link("Tell me more about your symptoms.", "Illness", null);
+		yield return text ("Patient: \"Doctor, I'm really sick. I have the flu and need cough medicine. It hurts when I cough. You told me I needed cough medicine last time.\"\n");
+		yield return lineBreak ();
+		yield return text ("Dr: \"Let me take a look at you.\"\n");
+
+		Vars.passage = "Illness";
+		
+		Vars.spassage = "Intro";
+		
+		Vars.ready = "no";
+
+		yield return link ("Have you had a fever?\n", "Fever Story", null);
+		yield return link ("You seem to be a bit confused?\n", "Confusion story", null);
+		yield return link ("Have you ever been admitted to a clinic?\n", "Irritability story", null);
+		yield return link ("How has your sleep been?\n", "Night sweats story", null);
+		yield return link ("Tell me more about your symptoms.\n", "Illness", null);
 		yield break;
 	}
 
@@ -382,29 +376,28 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #9: Morphine
 
-	void passage9_Init()
+	void passage9_Init ()
 	{
-		this.Passages[@"Morphine"] = new StoryPassage(@"Morphine", new string[]{  }, passage9_Main);
+		this.Passages [@"Morphine"] = new StoryPassage (@"Morphine", new string[]{ }, passage9_Main);
 	}
 
-	IStoryThread passage9_Main()
+	IStoryThread passage9_Main ()
 	{
-		yield return text("The only thing that will make me better is the medicine doctor. I broke my femur last year and ever since I got off the morphine, I've been sick. I get this flu that comes and goes and I just have to take more medicine until I feel better. ");
-		yield return lineBreak();
-		Vars.spassage  = "Work";
-		yield return lineBreak();
-		if(Vars.ready == "no") {
-			yield return lineBreak();
-			yield return text("	");
-			yield return link("Tell me more about your symptoms", Vars.passage, null);
-			yield return lineBreak();
+		yield return text ("The only thing that will make me better is the medicine doctor. I broke my femur last year and ever since I got off the morphine, I've been sick. I get this flu that comes and goes and I just have to take more medicine until I feel better. ");
+		
+		Vars.spassage = "Morphine";
+		
+		if (Vars.ready == "no") {
+			
+			
+			yield return link ("Tell me more about your symptoms\n", Vars.passage, null);
+			
+		} else {
+			
+			yield return link ("I think that I am ready to make a diagnosis\n", "Diagnose", null);
+			
 		}
-		else {
-			yield return lineBreak();
-			yield return link("I think that I am ready to make a diagnosis", "Diagnose", null);
-			yield return lineBreak();
-		}
-		yield return lineBreak();
+		
 		yield break;
 	}
 
@@ -412,20 +405,20 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #10: Confusion story
 
-	void passage10_Init()
+	void passage10_Init ()
 	{
-		this.Passages[@"Confusion story"] = new StoryPassage(@"Confusion story", new string[]{  }, passage10_Main);
+		this.Passages [@"Confusion story"] = new StoryPassage (@"Confusion story", new string[]{ }, passage10_Main);
 	}
 
-	IStoryThread passage10_Main()
+	IStoryThread passage10_Main ()
 	{
-		yield return text("Oh I just mistook you for another doctor. You have the same facial shape. They helped me last time. They gave me the medicine.");
-		yield return lineBreak();
-		Vars.spassage  = "Confusion story";
-		yield return lineBreak();
-		yield return link("Tell me about your medical history?", "Morphine", null);
-		yield return lineBreak();
-		yield return link("I'm the doctor here. Let me check you for symptoms", Vars.passage, null);
+		yield return text ("Oh I just mistook you for another doctor. You have the same facial shape. They helped me last time. They gave me the medicine.");
+		
+		Vars.spassage = "Confusion story";
+		
+		yield return link ("Tell me about your medical history?\n", "Morphine", null);
+		
+		yield return link ("I'm the doctor here. Let me check you for symptoms\n", Vars.passage, null);
 		yield break;
 	}
 
@@ -433,20 +426,20 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #11: Irritability story
 
-	void passage11_Init()
+	void passage11_Init ()
 	{
-		this.Passages[@"Irritability story"] = new StoryPassage(@"Irritability story", new string[]{  }, passage11_Main);
+		this.Passages [@"Irritability story"] = new StoryPassage (@"Irritability story", new string[]{ }, passage11_Main);
 	}
 
-	IStoryThread passage11_Main()
+	IStoryThread passage11_Main ()
 	{
-		yield return text("That has nothing to do with this. I just want the medicine. Get to the point.");
-		yield return lineBreak();
-		Vars.spassage  = "Irritability story";
-		yield return lineBreak();
-		yield return link("What's your medical history?", "Morphine", null);
-		yield return lineBreak();
-		yield return link("I'm the doctor here. Let me check you for symptoms", Vars.passage, null);
+		yield return text ("That has nothing to do with this. I just want the medicine. Get to the point.");
+		
+		Vars.spassage = "Irritability story";
+		
+		yield return link ("What's your medical history?\n", "Morphine", null);
+		
+		yield return link ("I'm the doctor here. Let me check you for symptoms\n", Vars.passage, null);
 		yield break;
 	}
 
@@ -454,20 +447,20 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #12: Night sweats story
 
-	void passage12_Init()
+	void passage12_Init ()
 	{
-		this.Passages[@"Night sweats story"] = new StoryPassage(@"Night sweats story", new string[]{  }, passage12_Main);
+		this.Passages [@"Night sweats story"] = new StoryPassage (@"Night sweats story", new string[]{ }, passage12_Main);
 	}
 
-	IStoryThread passage12_Main()
+	IStoryThread passage12_Main ()
 	{
-		yield return text("My partner left me. They were sick of me being sick. I wake up and reach over but they're not there. I wake up in a puddle of my own sweat.");
-		yield return lineBreak();
-		Vars.spassage  = "Night sweats story";
-		yield return lineBreak();
-		yield return link("What's your medical history?", "Morphine", null);
-		yield return lineBreak();
-		yield return link("I'm the doctor here. Let me check you for symptoms", Vars.passage, null);
+		yield return text ("My partner left me. They were sick of me being sick. I wake up and reach over but they're not there. I wake up in a puddle of my own sweat.");
+		
+		Vars.spassage = "Night sweats story";
+		
+		yield return link ("What's your medical history?\n", "Morphine", null);
+		
+		yield return link ("I'm the doctor here. Let me check you for symptoms\n", Vars.passage, null);
 		yield break;
 	}
 
@@ -475,12 +468,12 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #13: Diagnose
 
-	void passage13_Init()
+	void passage13_Init ()
 	{
-		this.Passages[@"Diagnose"] = new StoryPassage(@"Diagnose", new string[]{  }, passage13_Main);
+		this.Passages [@"Diagnose"] = new StoryPassage (@"Diagnose", new string[]{ }, passage13_Main);
 	}
 
-	IStoryThread passage13_Main()
+	IStoryThread passage13_Main ()
 	{
 		yield break;
 	}
@@ -489,20 +482,20 @@ public partial class @Codeine: Cradle.StoryFormats.Harlowe.HarloweStory
 	// .............
 	// #14: Fever Story
 
-	void passage14_Init()
+	void passage14_Init ()
 	{
-		this.Passages[@"Fever Story"] = new StoryPassage(@"Fever Story", new string[]{  }, passage14_Main);
+		this.Passages [@"Fever Story"] = new StoryPassage (@"Fever Story", new string[]{ }, passage14_Main);
 	}
 
-	IStoryThread passage14_Main()
+	IStoryThread passage14_Main ()
 	{
-		yield return text("Yeah I have. It's one of the most annoying parts of the flu. It really makes me feel like I'm melting.");
-		yield return lineBreak();
-		Vars.spassage  = "Fever Story";
-		yield return lineBreak();
-		yield return link("What's your medical history?", "Morphine", null);
-		yield return lineBreak();
-		yield return link("I'm the doctor here. Let me check you for symptoms", Vars.passage, null);
+		yield return text ("Yeah I have. It's one of the most annoying parts of the flu. It really makes me feel like I'm melting.");
+		
+		Vars.spassage = "Fever Story";
+		
+		yield return link ("What's your medical history?\n", "Morphine", null);
+		
+		yield return link ("I'm the doctor here. Let me check you for symptoms\n", Vars.passage, null);
 		yield break;
 	}
 

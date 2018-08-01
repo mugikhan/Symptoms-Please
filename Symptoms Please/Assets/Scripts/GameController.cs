@@ -18,6 +18,10 @@ public class GameController : MonoBehaviour {
     private Cues cueCodeineScript;
     private Cues1 cueDiabetesScript;
     private Cues2 cueHealthyScript;
+
+	public AudioClip doorOpen;
+	public AudioClip chairSlide;
+
     // Use this for initialization
     void Start () {
         
@@ -28,8 +32,19 @@ public class GameController : MonoBehaviour {
 
     }
 
+	IEnumerator chair(){
+		yield return new WaitForSeconds (this.GetComponent<AudioSource> ().clip.length);
+		this.GetComponent<AudioSource> ().clip = chairSlide;
+		this.GetComponent<AudioSource> ().Play();
+	}
+
+
     public void OnSpawnBtnClick()
     {
+		this.GetComponent<AudioSource> ().clip = doorOpen;
+		this.GetComponent<AudioSource> ().Play();
+		StartCoroutine (chair ());
+
         switch (x)
         {
             case 1:

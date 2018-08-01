@@ -24,7 +24,7 @@ public class ZoomScript : MonoBehaviour {
         {
             int index;
             int.TryParse(ZoomControl.zoomActive, out index);
-            //Debug.Log("Index: " + (index - 1));
+			//Debug.Log("Index: " + (index - 1) + "cam: " + zoomCam.Length);
             zoomCam[index - 1].GetComponent<Camera>().enabled = true;
 
         }
