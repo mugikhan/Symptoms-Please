@@ -9,10 +9,20 @@ public class Cues1 : MonoBehaviour {
 
     private Vector3 position = new  Vector3(0, 0, 0);
     private float rectPos = 0;
-	// Use this for initialization
-	void Start () {
-        
-	}
+    private GameController gameControllerScript;
+
+    // Use this for initialization
+    void Start () {
+        GameObject gameControllerObj = GameObject.FindGameObjectWithTag("GameController");
+        if (gameControllerObj != null)
+        {
+            gameControllerScript = gameControllerObj.GetComponent<GameController>();
+        }
+        if (gameControllerObj == null)
+        {
+            Debug.Log("Cannot find 'gameController' script");
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -131,6 +141,9 @@ public class Cues1 : MonoBehaviour {
         content.transform.position = position;
         content.transform.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
         content.transform.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
+        gameControllerScript.activePatient1 = false;
+        gameControllerScript.activePatient2 = false;
+        gameControllerScript.activePatient3 = true;
         Destroy(transform.parent.gameObject);
     }
     

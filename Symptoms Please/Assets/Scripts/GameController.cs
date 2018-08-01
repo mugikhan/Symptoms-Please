@@ -11,6 +11,10 @@ public class GameController : MonoBehaviour {
 
     public int x = 1;
 
+    public bool activePatient1 = true;
+    public bool activePatient2 = false;
+    public bool activePatient3 = false;
+
     public Transform Liam;
     public Transform Shane;
     public Transform Rodwin;
@@ -48,22 +52,43 @@ public class GameController : MonoBehaviour {
         switch (x)
         {
             case 1:
-                Instantiate(Liam, new Vector3(0, 0, -1f), Quaternion.identity);
-                cueCodeineScript = GameObject.FindGameObjectWithTag("Codeine").GetComponent<Cues>();
-                cueCodeineScript.GetScrollView();
-                x++;
+                if (activePatient1)
+                {
+                    Instantiate(Liam, new Vector3(0, 0, -1f), Quaternion.identity);
+                    cueCodeineScript = GameObject.FindGameObjectWithTag("Codeine").GetComponent<Cues>();
+                    cueCodeineScript.GetScrollView();
+                    x++;
+                }
+                else
+                {
+                    break;
+                }
                 break;
             case 2:
-                Instantiate(Shane, new Vector3(0, 0, -1f), Quaternion.identity);
-                cueDiabetesScript = GameObject.FindGameObjectWithTag("Diabetes").GetComponent<Cues1>();
-                cueDiabetesScript.GetScrollView();
-                x++;
+                if (activePatient2)
+                {
+                    Instantiate(Shane, new Vector3(0, 0, -1f), Quaternion.identity);
+                    cueDiabetesScript = GameObject.FindGameObjectWithTag("Diabetes").GetComponent<Cues1>();
+                    cueDiabetesScript.GetScrollView();
+                    x++;
+                }
+                else
+                {
+                    break;
+                }
                 break;
             case 3:
-                Instantiate(Rodwin, new Vector3(0, 0, -1f), Quaternion.identity);
-                cueHealthyScript = GameObject.FindGameObjectWithTag("Healthy").GetComponent<Cues2>();
-                cueHealthyScript.GetScrollView();
-                x++;
+                if (activePatient3)
+                {
+                    Instantiate(Rodwin, new Vector3(0, 0, -1f), Quaternion.identity);
+                    cueHealthyScript = GameObject.FindGameObjectWithTag("Healthy").GetComponent<Cues2>();
+                    cueHealthyScript.GetScrollView();
+                    x++;
+                }
+                else
+                {
+                    break;
+                }
                 break;
             case 4:
                 Debug.Log("GAME OVER");
